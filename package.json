@@ -1,0 +1,37 @@
+{
+  "name": "adding-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "run npm lint",
+    "test": "mocha",
+    "test:watch": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhuneke/adding-auth.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhuneke/adding-auth/issues"
+  },
+  "homepage": "https://github.com/bhuneke/adding-auth#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "mongoose": "^4.8.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "eslint": "^3.15.0",
+    "mocha": "^3.2.0",
+    "morgan": "^1.8.1",
+    "nodemon": "^1.11.0"
+  }
+}
