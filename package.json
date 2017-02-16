@@ -1,24 +1,25 @@
 {
-  "name": "adding-auth",
+  "name": "adding-auth",//lowercase only, dashes for separation
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "adding authorization",
+  "main": "server.js",
   "directories": {
-    "test": "test"
+    "test": "mocha"
   },
   "scripts": {
     "lint": "eslint .",
     "pretest": "run npm lint",
     "test": "mocha",
-    "test:watch": "nodemon",
-    "start": "node server"
+    "test:watch": "mocha -w",
+    "start": "node server",
+    "start:watch": "nodemon server"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bhuneke/adding-auth.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Brigitte Huneke <contact@brigittehuneke@gmail.com> (https://github.com/bhuneke)",//
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bhuneke/adding-auth/issues"
   },
