@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "pretest": "run npm lint",
     "test": "mocha",
-    "test:watch": "nodemon"
+    "test:watch": "nodemon",
+    "start": "node server"
   },
   "repository": {
     "type": "git",
