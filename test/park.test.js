@@ -8,14 +8,14 @@ describe('validates Park schema', () => {
 
     it('validation passes when name and city provided', () => {
         return new Park( { name: 'Park One', city: 'Portland' } )
-        .validate()
+        .validate();
     });
 
     it('validation fails without name', () => {
         return new Park( { city: 'France' } )
         .validate()
         .then(
-            () => { throw new Error('validation not expected without name')},
+            () => { throw new Error('validation not expected without name');},
             err => assert.isNotNull(err)
         );
     });
@@ -24,7 +24,7 @@ describe('validates Park schema', () => {
         return new Park( { name: 'Park One' } )
         .validate()
         .then(
-            () => { throw new Error('validation not expected without city')},
+            () => { throw new Error('validation not expected without city');},
             err => assert.isNotNull(err)
         );
     });
@@ -37,7 +37,7 @@ describe('validates Park schema', () => {
         })
         .validate()
         .then(
-            () => { throw new Error('validation not expected without city')},
+            () => { throw new Error('validation not expected without city');},
             err => assert.isNotNull(err)
         );
     });
@@ -48,6 +48,6 @@ describe('validates Park schema', () => {
             city: 'Portland',
             amenities: 'fountain'
         })
-        .validate()
+        .validate();
     });
 });
