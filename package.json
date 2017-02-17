@@ -1,5 +1,5 @@
 {
-  "name": "adding-auth",//lowercase only, dashes for separation
+  "name": "adding-auth",
   "version": "1.0.0",
   "description": "adding authorization",
   "main": "server.js",
@@ -18,13 +18,14 @@
     "type": "git",
     "url": "git+https://github.com/bhuneke/adding-auth.git"
   },
-  "author": "Brigitte Huneke <contact@brigittehuneke@gmail.com> (https://github.com/bhuneke)",//
+  "author": "Brigitte Huneke <contact@brigittehuneke@gmail.com> (https://github.com/bhuneke)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bhuneke/adding-auth/issues"
   },
   "homepage": "https://github.com/bhuneke/adding-auth#readme",
   "dependencies": {
+    "body-parser": "^1.16.1",
     "express": "^4.14.1",
     "mongoose": "^4.8.3"
   },
