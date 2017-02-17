@@ -62,5 +62,21 @@ describe('api tests', () => {
                 assert.deepEqual(res.body, parkOne);
             });
     });
+
+    it('GET all parks', () => {
+        return Promise
+            .all([
+                savePark(parkTwo),
+                savePark(parkThree)
+            ])
+            .then(savedParks => {
+                parkTwo = savedParks[0],
+                parkThree = savedParks[1];
+            })
+            .then(() => request.get('/parks'))
+            .then(parks => {
+                assert.deepEqual(parks.body, [parkOne, parkTwo, parkThree]);
+            });
+    });
 });
 
