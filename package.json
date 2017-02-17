@@ -29,6 +29,7 @@
     "body-parser": "^1.16.1",
     "express": "^4.14.1",
     "jsonwebtoken": "^7.3.0",
+    "jsonwebtoken-promisified": "^1.0.3",
     "mongoose": "^4.8.3"
   },
   "devDependencies": {
