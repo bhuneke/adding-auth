@@ -1,8 +1,6 @@
-const assert = require('chai').assert;
-const mongoose = require('mongoose');
 const Park = require('../lib/models/park-schema');
+const testInvalid = require('./test-invalid')(Park);
 
-mongoose.Promise = Promise;
 
 describe('validates Park schema', () => {
 
@@ -12,34 +10,19 @@ describe('validates Park schema', () => {
     });
 
     it('validation fails without name', () => {
-        return new Park( { city: 'France' } )
-        .validate()
-        .then(
-            () => { throw new Error('validation not expected without name');},
-            err => assert.isNotNull(err)
-        );
+        return testInvalid( { city: 'France' } );
     });
 
     it('validation fails without city', () => {
-        return new Park( { name: 'Park One' } )
-        .validate()
-        .then(
-            () => { throw new Error('validation not expected without city');},
-            err => assert.isNotNull(err)
-        );
+        return testInvalid( { name: 'Park One' } );
     });
 
     it('validation fails when amenity not in enum array', () => {
-        return new Park({ 
+        return testInvalid({ 
             name: 'Park One',
             city: 'Portland',
             amenities: 'slide'
-        })
-        .validate()
-        .then(
-            () => { throw new Error('validation not expected without city');},
-            err => assert.isNotNull(err)
-        );
+        });
     });
 
     it('validation passes when amenity in enum array', () => {
